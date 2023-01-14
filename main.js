@@ -1,6 +1,11 @@
 import './style.css'
 import * as THREE from 'three'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
+import  background  from './assets/background.png'
+import profile from './assets/potrait.jpeg'
+import moonPic from './assets/moon.jpg'
+import sunPic from './assets/sun.jpg'
+import normalPic from './assets/normal.jpg'
 
 const scene = new THREE.Scene()
 
@@ -52,13 +57,13 @@ function addStar(){
 
 Array(200).fill().forEach(addStar) //Looping the star creation 200 times
 
-const spaceTexture = new THREE.TextureLoader().load('/assets/background.png')
+const spaceTexture = new THREE.TextureLoader().load(background)
 scene.background = spaceTexture
 
 
 //Avatar on cube
 
-const LuisTexture = new THREE.TextureLoader().load('/assets/potrait.jpeg')
+const LuisTexture = new THREE.TextureLoader().load(profile)
 
 const luis = new THREE.Mesh(
   new THREE.BoxGeometry(5,6,5),
@@ -71,8 +76,8 @@ scene.add(luis)
 
 
 //Moon 
-const moonMap = new THREE.TextureLoader().load('/assets/moon.jpg')
-const normalTexture = new THREE.TextureLoader().load('/assets/normal.jpg')
+const moonMap = new THREE.TextureLoader().load(moonPic)
+const normalTexture = new THREE.TextureLoader().load(normalPic)
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(2,32,32),
@@ -84,7 +89,7 @@ const moon = new THREE.Mesh(
 
 scene.add(moon)
 //Sun
-const sunMap = new THREE.TextureLoader().load('/assets/sun.jpg')
+const sunMap = new THREE.TextureLoader().load(sunPic)
 
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(10,32,32),

@@ -1,19 +1,15 @@
 /* For Mobile*/
-body{
-  max-width: 100vw;
-}
 main{
-  max-width: 95vw;
-  color: white  ;
-  z-index: 99;
-  position: absolute;
-  margin:  auto;
+  width: 97vw;
+    color: white  ;
+    z-index: 99;
+    position: absolute;
+    margin: auto;
 }
 canvas {
   position: fixed;
   top: 0;
   left: 0;
-  width: 97vw;
 }
 h1{
   font-family: 'Anton', sans-serif;
@@ -60,7 +56,7 @@ section p{
   }
   .proyects ul li{
     font-weight: lighter;
-    width: 90vw;
+    width: 90%;
   }
   .education{
     border-radius: 20px;
@@ -87,6 +83,7 @@ section p{
     position: absolute;
     margin: 0px auto;
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
   canvas {
     position: fixed;
